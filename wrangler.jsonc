@@ -1,0 +1,21 @@
+{
+  // FlowRegime One — One-Person Quantitative Crypto ETF & Volatility Regime Desk
+  // $0-Infra Cloudflare Workers Free Tier (100k req/day, zero hardcoded secrets)
+  // Bind optional SoSoValue OpenAPI v1 key via:
+  //   wrangler secret put SOSOVALUE_API_KEY
+  "name": "upswing-flowregime",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-11-23",
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "vars": {
+    "SOSOVALUE_BASE_URL": "https://openapi.sosovalue.com/openapi/v1",
+    "CACHE_TTL_SECONDS": "120",
+    "APP_ENV": "production"
+  }
+}

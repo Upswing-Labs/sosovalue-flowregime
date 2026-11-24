@@ -1,0 +1,17 @@
+{
+  "name": "upswing-flowregime",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FlowRegime One — One-Person Quantitative Crypto ETF & Volatility Regime Desk powered by SoSoValue OpenAPI v1 + Distilled Colab GPU TCN-Attention Edge Inference (Upswing-Labs)",
+  "scripts": {
+    "test": "node --test tests/flowregime.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:dry-run": "wrangler deploy --dry-run",
+    "calibrate": "python scripts/calibrate_baseline.py"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

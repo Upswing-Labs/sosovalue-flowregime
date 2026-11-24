@@ -1,0 +1,429 @@
+{
+  "schema_version": "flowregime-walkforward-audit-v1",
+  "generated_at_utc": "2026-11-24T02:56:22Z",
+  "methodology": {
+    "validation": "Purged Expanding Walk-Forward Cross-Validation",
+    "folds": 5,
+    "embargo_days": 10,
+    "lookahead_leakage": false,
+    "transaction_cost_bps": 6.0,
+    "max_kelly_fraction": 0.25,
+    "hard_drawdown_circuit_breaker_pct": 8.0,
+    "oos_window": "2025-08-30 -> 2026-11-17",
+    "oos_days": 445
+  },
+  "flowregime_strategy": {
+    "total_return_pct": 2.28,
+    "cagr_pct": 1.86,
+    "annualized_vol_pct": 3.92,
+    "sharpe": 0.49,
+    "sortino": 0.688,
+    "max_drawdown_pct": 3.76,
+    "calmar": 0.495,
+    "hit_rate_pct": 79.33,
+    "final_equity": 1.0228,
+    "regime_classifier_oos_accuracy_pct": 36.4
+  },
+  "btc_buy_and_hold_benchmark": {
+    "total_return_pct": -48.42,
+    "cagr_pct": -41.9,
+    "annualized_vol_pct": 43.38,
+    "sharpe": -1.033,
+    "sortino": -1.384,
+    "max_drawdown_pct": 56.81,
+    "calmar": -0.737,
+    "hit_rate_pct": 48.31,
+    "final_equity": 0.5158
+  },
+  "drawdown_reduction_pct": 53.05,
+  "sharpe_improvement": 1.523,
+  "folds": [
+    {
+      "fold": 1,
+      "train_range": "2025-01-03..2025-08-19",
+      "embargo_days": 10,
+      "test_range": "2025-08-30..2025-11-26",
+      "test_days": 89,
+      "strategy_return_pct": 1.44,
+      "benchmark_return_pct": -17.66,
+      "strategy_sharpe": 2.415,
+      "strategy_max_dd_pct": 0.83,
+      "benchmark_max_dd_pct": 33.11
+    },
+    {
+      "fold": 2,
+      "train_range": "2025-01-03..2025-11-16",
+      "embargo_days": 10,
+      "test_range": "2025-11-27..2026-02-23",
+      "test_days": 89,
+      "strategy_return_pct": -0.36,
+      "benchmark_return_pct": -32.43,
+      "strategy_sharpe": -0.497,
+      "strategy_max_dd_pct": 1.8,
+      "benchmark_max_dd_pct": 36.47
+    },
+    {
+      "fold": 3,
+      "train_range": "2025-01-03..2026-02-13",
+      "embargo_days": 10,
+      "test_range": "2026-02-24..2026-05-23",
+      "test_days": 89,
+      "strategy_return_pct": -1.21,
+      "benchmark_return_pct": 17.79,
+      "strategy_sharpe": -0.723,
+      "strategy_max_dd_pct": 3.76,
+      "benchmark_max_dd_pct": 12.26
+    },
+    {
+      "fold": 4,
+      "train_range": "2025-01-03..2026-05-13",
+      "embargo_days": 10,
+      "test_range": "2026-05-24..2026-08-20",
+      "test_days": 89,
+      "strategy_return_pct": 2.29,
+      "benchmark_return_pct": -0.27,
+      "strategy_sharpe": 2.937,
+      "strategy_max_dd_pct": 0.73,
+      "benchmark_max_dd_pct": 24.94
+    },
+    {
+      "fold": 5,
+      "train_range": "2025-01-03..2026-08-10",
+      "embargo_days": 10,
+      "test_range": "2026-08-21..2026-11-17",
+      "test_days": 89,
+      "strategy_return_pct": 0.13,
+      "benchmark_return_pct": -21.08,
+      "strategy_sharpe": 0.193,
+      "strategy_max_dd_pct": 0.9,
+      "benchmark_max_dd_pct": 28.08
+    }
+  ],
+  "equity_curve": [
+    {
+      "date": "2025-08-30",
+      "flowregime_equity": 1.0001,
+      "btc_bh_equity": 0.9954
+    },
+    {
+      "date": "2025-09-06",
+      "flowregime_equity": 0.997,
+      "btc_bh_equity": 1.0218
+    },
+    {
+      "date": "2025-09-13",
+      "flowregime_equity": 1.0,
+      "btc_bh_equity": 1.0603
+    },
+    {
+      "date": "2025-09-20",
+      "flowregime_equity": 0.9982,
+      "btc_bh_equity": 1.0593
+    },
+    {
+      "date": "2025-09-27",
+      "flowregime_equity": 0.9975,
+      "btc_bh_equity": 1.0288
+    },
+    {
+      "date": "2025-10-04",
+      "flowregime_equity": 1.0081,
+      "btc_bh_equity": 1.1321
+    },
+    {
+      "date": "2025-10-11",
+      "flowregime_equity": 1.009,
+      "btc_bh_equity": 1.0503
+    },
+    {
+      "date": "2025-10-18",
+      "flowregime_equity": 1.0098,
+      "btc_bh_equity": 0.9905
+    },
+    {
+      "date": "2025-10-25",
+      "flowregime_equity": 1.0106,
+      "btc_bh_equity": 1.0427
+    },
+    {
+      "date": "2025-11-01",
+      "flowregime_equity": 1.0115,
+      "btc_bh_equity": 1.0064
+    },
+    {
+      "date": "2025-11-08",
+      "flowregime_equity": 1.0123,
+      "btc_bh_equity": 0.9502
+    },
+    {
+      "date": "2025-11-15",
+      "flowregime_equity": 1.0131,
+      "btc_bh_equity": 0.8525
+    },
+    {
+      "date": "2025-11-22",
+      "flowregime_equity": 1.0139,
+      "btc_bh_equity": 0.7835
+    },
+    {
+      "date": "2025-11-29",
+      "flowregime_equity": 1.0147,
+      "btc_bh_equity": 0.8152
+    },
+    {
+      "date": "2025-12-06",
+      "flowregime_equity": 1.0155,
+      "btc_bh_equity": 0.8129
+    },
+    {
+      "date": "2025-12-13",
+      "flowregime_equity": 1.0164,
+      "btc_bh_equity": 0.7918
+    },
+    {
+      "date": "2025-12-20",
+      "flowregime_equity": 1.0172,
+      "btc_bh_equity": 0.7951
+    },
+    {
+      "date": "2025-12-27",
+      "flowregime_equity": 1.018,
+      "btc_bh_equity": 0.7881
+    },
+    {
+      "date": "2026-01-03",
+      "flowregime_equity": 1.0188,
+      "btc_bh_equity": 0.8205
+    },
+    {
+      "date": "2026-01-10",
+      "flowregime_equity": 1.0157,
+      "btc_bh_equity": 0.814
+    },
+    {
+      "date": "2026-01-17",
+      "flowregime_equity": 1.0177,
+      "btc_bh_equity": 0.8378
+    },
+    {
+      "date": "2026-01-24",
+      "flowregime_equity": 1.0055,
+      "btc_bh_equity": 0.7733
+    },
+    {
+      "date": "2026-01-31",
+      "flowregime_equity": 1.008,
+      "btc_bh_equity": 0.6838
+    },
+    {
+      "date": "2026-02-07",
+      "flowregime_equity": 1.0089,
+      "btc_bh_equity": 0.6125
+    },
+    {
+      "date": "2026-02-14",
+      "flowregime_equity": 1.0097,
+      "btc_bh_equity": 0.5983
+    },
+    {
+      "date": "2026-02-21",
+      "flowregime_equity": 1.0105,
+      "btc_bh_equity": 0.5879
+    },
+    {
+      "date": "2026-02-28",
+      "flowregime_equity": 1.0113,
+      "btc_bh_equity": 0.5697
+    },
+    {
+      "date": "2026-03-07",
+      "flowregime_equity": 1.0093,
+      "btc_bh_equity": 0.5693
+    },
+    {
+      "date": "2026-03-14",
+      "flowregime_equity": 1.0199,
+      "btc_bh_equity": 0.6277
+    },
+    {
+      "date": "2026-03-21",
+      "flowregime_equity": 1.0017,
+      "btc_bh_equity": 0.5838
+    },
+    {
+      "date": "2026-03-28",
+      "flowregime_equity": 0.9942,
+      "btc_bh_equity": 0.5661
+    },
+    {
+      "date": "2026-04-04",
+      "flowregime_equity": 0.995,
+      "btc_bh_equity": 0.5916
+    },
+    {
+      "date": "2026-04-11",
+      "flowregime_equity": 0.9975,
+      "btc_bh_equity": 0.6058
+    },
+    {
+      "date": "2026-04-18",
+      "flowregime_equity": 0.9932,
+      "btc_bh_equity": 0.6307
+    },
+    {
+      "date": "2026-04-25",
+      "flowregime_equity": 1.0033,
+      "btc_bh_equity": 0.6714
+    },
+    {
+      "date": "2026-05-02",
+      "flowregime_equity": 1.0012,
+      "btc_bh_equity": 0.6701
+    },
+    {
+      "date": "2026-05-09",
+      "flowregime_equity": 1.0121,
+      "btc_bh_equity": 0.7006
+    },
+    {
+      "date": "2026-05-16",
+      "flowregime_equity": 0.9977,
+      "btc_bh_equity": 0.6594
+    },
+    {
+      "date": "2026-05-23",
+      "flowregime_equity": 0.9985,
+      "btc_bh_equity": 0.6554
+    },
+    {
+      "date": "2026-05-30",
+      "flowregime_equity": 0.9969,
+      "btc_bh_equity": 0.6261
+    },
+    {
+      "date": "2026-06-06",
+      "flowregime_equity": 0.9976,
+      "btc_bh_equity": 0.5358
+    },
+    {
+      "date": "2026-06-13",
+      "flowregime_equity": 0.9984,
+      "btc_bh_equity": 0.5555
+    },
+    {
+      "date": "2026-06-20",
+      "flowregime_equity": 0.9992,
+      "btc_bh_equity": 0.5341
+    },
+    {
+      "date": "2026-06-27",
+      "flowregime_equity": 1.0,
+      "btc_bh_equity": 0.502
+    },
+    {
+      "date": "2026-07-04",
+      "flowregime_equity": 1.0008,
+      "btc_bh_equity": 0.536
+    },
+    {
+      "date": "2026-07-11",
+      "flowregime_equity": 1.0,
+      "btc_bh_equity": 0.537
+    },
+    {
+      "date": "2026-07-18",
+      "flowregime_equity": 0.9988,
+      "btc_bh_equity": 0.5441
+    },
+    {
+      "date": "2026-07-25",
+      "flowregime_equity": 0.9999,
+      "btc_bh_equity": 0.5493
+    },
+    {
+      "date": "2026-08-01",
+      "flowregime_equity": 0.9972,
+      "btc_bh_equity": 0.5334
+    },
+    {
+      "date": "2026-08-08",
+      "flowregime_equity": 0.999,
+      "btc_bh_equity": 0.5448
+    },
+    {
+      "date": "2026-08-15",
+      "flowregime_equity": 0.9943,
+      "btc_bh_equity": 0.5275
+    },
+    {
+      "date": "2026-08-22",
+      "flowregime_equity": 1.0201,
+      "btc_bh_equity": 0.6486
+    },
+    {
+      "date": "2026-08-29",
+      "flowregime_equity": 1.0197,
+      "btc_bh_equity": 0.6476
+    },
+    {
+      "date": "2026-09-05",
+      "flowregime_equity": 1.0237,
+      "btc_bh_equity": 0.6687
+    },
+    {
+      "date": "2026-09-12",
+      "flowregime_equity": 1.0181,
+      "btc_bh_equity": 0.6389
+    },
+    {
+      "date": "2026-09-19",
+      "flowregime_equity": 1.018,
+      "btc_bh_equity": 0.6736
+    },
+    {
+      "date": "2026-09-26",
+      "flowregime_equity": 1.0221,
+      "btc_bh_equity": 0.6993
+    },
+    {
+      "date": "2026-10-03",
+      "flowregime_equity": 1.0253,
+      "btc_bh_equity": 0.7161
+    },
+    {
+      "date": "2026-10-10",
+      "flowregime_equity": 1.0179,
+      "btc_bh_equity": 0.6921
+    },
+    {
+      "date": "2026-10-17",
+      "flowregime_equity": 1.0179,
+      "btc_bh_equity": 0.6778
+    },
+    {
+      "date": "2026-10-24",
+      "flowregime_equity": 1.0199,
+      "btc_bh_equity": 0.6612
+    },
+    {
+      "date": "2026-10-31",
+      "flowregime_equity": 1.0208,
+      "btc_bh_equity": 0.6455
+    },
+    {
+      "date": "2026-11-07",
+      "flowregime_equity": 1.0216,
+      "btc_bh_equity": 0.6149
+    },
+    {
+      "date": "2026-11-14",
+      "flowregime_equity": 1.0224,
+      "btc_bh_equity": 0.5352
+    },
+    {
+      "date": "2026-11-17",
+      "flowregime_equity": 1.0228,
+      "btc_bh_equity": 0.5158
+    }
+  ]
+}
