@@ -773,13 +773,14 @@ curl -s -X POST https://upswing-flowregime.&lt;your-subdomain&gt;.workers.dev/ap
   try {
     const origin = window.location.origin;
     if (origin && origin.startsWith("http")) {
-      document.getElementById("apiCurlBox").textContent =
-        "curl -s " + origin + "/api/v1/regime | jq .\n" +
-        "curl -s " + origin + "/api/v1/etf-flows | jq .\n" +
-        "curl -s " + origin + "/api/v1/backtest | jq .\n" +
-        "curl -s -X POST " + origin + "/api/v1/simulate-rebalance \\\n" +
-        "  -H \"Content-Type: application/json\" \\\n" +
-        "  -d '{\"capital_usd\":50000,\"target_vol_pct\":28,\"current_drawdown_pct\":0,\"max_drawdown_stop_pct\":8}' | jq .";
+      document.getElementById("apiCurlBox").textContent = [
+        "curl -s " + origin + "/api/v1/regime | jq .",
+        "curl -s " + origin + "/api/v1/etf-flows | jq .",
+        "curl -s " + origin + "/api/v1/backtest | jq .",
+        "curl -s -X POST " + origin + "/api/v1/simulate-rebalance \\\\",
+        "  -H " + JSON.stringify("Content-Type: application/json") + " \\\\",
+        "  -d '" + JSON.stringify({ capital_usd: 50000, target_vol_pct: 28, current_drawdown_pct: 0, max_drawdown_stop_pct: 8 }) + "' | jq ."
+      ].join("\\n");
     }
   } catch {}
 
